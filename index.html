@@ -14,12 +14,16 @@ body:before{
   position:fixed;
   inset:0;
   z-index:-3;
+  background:url("assets/background.gif") center center / cover no-repeat;
+}
 
-  background:
-    linear-gradient(rgba(5,5,8,.55),rgba(5,5,8,.70)),
-    url("assets/background.gif") center/cover no-repeat;
-
-  transform:scale(1.04);
+body:after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:rgba(0,0,0,.20);
 }
 @keyframes drift{to{transform:translate3d(38px,38px,0)}}
 .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px}
