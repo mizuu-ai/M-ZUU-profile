@@ -9,8 +9,18 @@
 :root{--accent:#7c5cff;--text:#fff;--muted:#b9b9c7}
 html,body{min-height:100%;font-family:Inter,system-ui,sans-serif;color:var(--text)}
 body{min-height:100vh;overflow-x:hidden;background:#09090d}
-body:before{content:"";position:fixed;inset:0;z-index:-3;background:linear-gradient(rgba(5,5,8,.52),rgba(5,5,8,.72)),url("background.gif") center/cover no-repeat;filter:saturate(.9);transform:scale(1.04)}
-body:after{content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px);background-size:38px 38px;opacity:.13;animation:drift 25s linear infinite}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+
+  background:
+    linear-gradient(rgba(5,5,8,.55),rgba(5,5,8,.70)),
+    url("assets/background.gif") center/cover no-repeat;
+
+  transform:scale(1.04);
+}
 @keyframes drift{to{transform:translate3d(38px,38px,0)}}
 .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px}
 .card{width:min(520px,100%);text-align:center;padding:30px 22px 24px;border:1px solid rgba(255,255,255,.14);border-radius:28px;background:rgba(13,13,20,.62);backdrop-filter:blur(22px);box-shadow:0 30px 80px rgba(0,0,0,.55);animation:enter .8s ease both}
