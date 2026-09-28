@@ -112,7 +112,7 @@ h1{font-size:32px;margin-top:18px;letter-spacing:-.8px}.handle{color:var(--muted
 
 <script>
 const audio=document.getElementById("audio"),btn=document.getElementById("musicBtn");
-btn.addEventListener("click",async()=>{try{if(audio.paused){await audio.play();btn.textContent="⏸ Music"}else{audio.pause();btn.textContent="▶ Music"}}catch(e){btn.textContent="Add music.mp3"}});
+btn.addEventListener("click",async()=>{try{if(audio.paused){await audio.play();btn.textContent="⏸ Music"}else{audio.pause();btn.textContent="▶ Music"}}catch(e){btn.textContent="music.mp3"}});
 const key="masud_profile_views",count=Number(localStorage.getItem(key)||0)+1;
 localStorage.setItem(key,count);
 document.getElementById("views").textContent=count.toLocaleString();
